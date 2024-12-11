@@ -1,0 +1,91 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "How are you?",
+                "Good day",
+                "Hey",
+                "What's up"
+            ],
+            "responses": [
+                "Hello!",
+                "Hi there!",
+                "Greetings!",
+                "How can I assist you today?"
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Have a nice day",
+                "See you"
+            ],
+            "responses": [
+                "Goodbye!",
+                "See you later!",
+                "Have a great day!",
+                "Take care!"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Thanks a lot"
+            ],
+            "responses": [
+                "You're welcome!",
+                "Happy to help!",
+                "Anytime!",
+                "My pleasure!"
+            ]
+        },
+        {
+            "tag": "hours",
+            "patterns": [
+                "What are your hours?",
+                "When are you open?",
+                "What are your opening hours?",
+                "What are your closing hours?"
+            ],
+            "responses": [
+                "We're open from 9am to 5pm every day.",
+                "Our working hours are from 9am to 5pm every day."
+            ]
+        },
+        {
+            "tag": "location",
+            "patterns": [
+                "Where are you located?",
+                "What is your address?",
+                "Where is your office?",
+                "Where can I find you?"
+            ],
+            "responses": [
+                "We're located at 123 Main Street, Anytown, USA.",
+                "Our office is at 123 Main Street, Anytown, USA."
+            ]
+        },
+        {
+            "tag": "services",
+            "patterns": [
+                "What services do you offer?",
+                "Tell me about your services",
+                "What can you do?",
+                "What are your services?"
+            ],
+            "responses": [
+                "We offer a wide range of services including web development, mobile app development, and digital marketing.",
+                "Our services include web development, mobile app development, and digital marketing."
+            ]
+        }
+    ]
+}

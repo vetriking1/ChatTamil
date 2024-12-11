@@ -1,37 +1,44 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import React from "react";
+import { StyleSheet } from "react-native";
+import { Stack } from "expo-router";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+const styles = StyleSheet.create({
+  header: {
+    backgroundColor: "4c00b0", // Change this to the color you prefer
+  },
+  headerTitle: {
+    color: "black",
+    // Change this to the color you prefer for the header text
+  },
+});
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <Stack>
+      <Stack.Screen
+        name="index"
+        options={{
+          title: "முகப்பு பக்கம்",
+          headerStyle: styles.header,
+          headerTintColor: styles.headerTitle.color,
+        }}
+      />
+      <Stack.Screen
+        name="chat"
+        options={{
+          title: "விவசாயி உரையாடல்",
+          headerStyle: styles.header,
+          headerTintColor: styles.headerTitle.color,
+        }}
+      />
+      <Stack.Screen
+        name="cropCheck"
+        options={{
+          title: "பயிர் ஆரோக்கியம் சோதனை",
+          headerStyle: styles.header,
+          headerTintColor: styles.headerTitle.color,
+        }}
+      />
+    </Stack>
   );
 }

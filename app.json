@@ -13,13 +13,19 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+            "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app uses the microphone to recognize speech."
+      }
+
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": ["RECORD_AUDIO"],
+      "package": "com.anonymous.ChatTamil"
     },
     "web": {
       "bundler": "metro",
